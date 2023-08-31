@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box{
+    width: 360px;
+    height: 200px;
+    background-color:#fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circle{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 -20px;
+    border-radius: 50%;
+    background-color:none;
+    border: 1px solid #3beaea;
+    border-width: 40px;
+
+}
+.dot{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: pink;
+    
+    animation: animatedot 4s linear infinite;
+    animation-delay: calc(-0.025s * var(--i));
+
+}
+@keyframes animatedot {
+    0%
+    {
+        transform-origin: 100px 50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    50%
+    {
+        transform-origin: 100px 50%;
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+    50.00000001%
+    {
+        transform-origin: -60px 50%;
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+    100%
+    {
+        transform-origin: -60px 50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    
+}
